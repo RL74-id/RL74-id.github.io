@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:," />
+<title>DCBE Business Directory — DeCordova Bend Estates, Granbury TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f5f2;
+    --surface:#ffffff;
+    --surface-2:#eef1ec;
+    --ink:#18251e;
+    --ink-2:#3d4f44;
+    --muted:#687a6e;
+    --line:#dde3dc;
+    --line-strong:#c9d2c7;
+    --pine:#1c4636;
+    --pine-deep:#123326;
+    --pine-ink:#ffffff;
+    --clay:#b85c2e;
+    --clay-soft:#fdf0e8;
+    --gold:#c9a23c;
+    --chip-bg:#eef1ec;
+    --chip-active:#1c4636;
+    --chip-active-ink:#fff;
+    --shadow:0 1px 2px rgba(18,51,38,.06),0 8px 24px rgba(18,51,38,.06);
+    --radius:14px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#101613;
+      --surface:#1a211c;
+      --surface-2:#222b25;
+      --ink:#edf0eb;
+      --ink-2:#c3cec4;
+      --muted:#93a396;
+      --line:#2c3830;
+      --line-strong:#3a4a3f;
+      --pine:#1e4d3a;
+      --pine-deep:#0f2a1f;
+      --clay:#e08a5a;
+      --clay-soft:#2e211a;
+      --chip-bg:#222b25;
+      --chip-active:#2f6b52;
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Public Sans",system-ui,-apple-system,Segoe UI,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:var(--pine)}
+  @media (prefers-color-scheme: dark){ a{color:#8fc7ab} }
+
+  /* ---------- Hero ---------- */
+  .hero{background:var(--pine-deep);color:#eef3ee;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:auto -10% -55% auto;width:560px;height:560px;border-radius:50%;border:1px solid rgba(255,255,255,.14);box-shadow:0 0 0 42px rgba(255,255,255,.03),0 0 0 96px rgba(255,255,255,.02);pointer-events:none}
+  .hero-inner{max-width:1180px;margin:0 auto;padding:28px 20px 34px;position:relative;z-index:1}
+  .toprow{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand-mark{width:44px;height:44px;border-radius:10px;background:#fff;color:var(--pine-deep);display:grid;place-items:center;font-weight:800;letter-spacing:.04em;font-size:13px;line-height:1;text-align:center}
+  .brand-name{font-weight:700;letter-spacing:.14em;font-size:12px;text-transform:uppercase;color:#cfe0d3}
+  .brand-sub{font-size:12.5px;color:#9db8a6;margin-top:2px}
+  .hero-count{font-size:13px;color:#cfe0d3;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:8px 14px;white-space:nowrap}
+  .hero-count strong{color:#fff}
+  h1{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:clamp(34px,5.5vw,56px);line-height:1.02;letter-spacing:-.01em;margin:26px 0 12px;max-width:720px}
+  h1 em{font-style:italic;color:#e9c46a}
+  .lede{font-size:16.5px;line-height:1.55;color:#d7e4d9;max-width:620px;margin:0}
+  .search-wrap{margin-top:26px;background:var(--surface);border-radius:16px;padding:10px;box-shadow:0 12px 32px rgba(0,0,0,.22);display:flex;flex-direction:column;gap:10px}
+  @media(min-width:720px){ .search-wrap{flex-direction:row;align-items:center} }
+  .search-field{flex:1;display:flex;align-items:center;gap:10px;padding:4px 6px 4px 10px}
+  .search-field svg{flex:none;color:var(--muted)}
+  .search-field input{flex:1;border:0;outline:0;background:transparent;font:inherit;font-size:17px;color:var(--ink);min-height:44px;min-width:0}
+  .search-field input::placeholder{color:var(--muted)}
+  .search-actions{display:flex;gap:8px;flex-wrap:wrap}
+  .btn{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:700;border-radius:10px;min-height:44px;padding:0 18px;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none}
+  .btn-primary{background:var(--pine);color:#fff}
+  .btn-primary:active{transform:translateY(1px)}
+  .btn-ghost{background:var(--surface-2);color:var(--ink)}
+  .btn-clay{background:var(--clay);color:#fff}
+  .btn-clay:active{transform:translateY(1px)}
+  .hero-meta{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px;font-size:13.5px;color:#b9cfbc}
+  .hero-meta span{display:inline-flex;align-items:center;gap:7px}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);display:inline-block;flex:none}
+  .dot.live{background:#7fd08f}
+  .dot.offline{background:#e08a5a}
+
+  /* ---------- Toolbar / filters ---------- */
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px 56px}
+  .toolbar{position:sticky;top:0;z-index:20;background:var(--bg);padding:18px 0 12px;border-bottom:1px solid var(--line)}
+  .toolbar-row{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .results-line{font-size:14px;color:var(--muted)}
+  .results-line strong{color:var(--ink);font-size:15px}
+  .sortbox{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--muted)}
+  .sortbox select{font:inherit;font-size:14px;color:var(--ink);background:var(--surface);border:1px solid var(--line-strong);border-radius:9px;padding:0 10px;min-height:40px}
+  .cats{margin-top:14px}
+  .cats-label{font-size:11.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:9px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{appearance:none;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink-2);font:inherit;font-size:13.5px;font-weight:600;border-radius:999px;min-height:38px;padding:6px 14px;cursor:pointer;display:inline-flex;align-items:center;gap:7px}
+  .chip .n{font-size:11.5px;font-weight:700;background:var(--surface-2);border-radius:999px;padding:1px 7px;color:var(--muted)}
+  .chip[aria-pressed="true"]{background:var(--chip-active);border-color:var(--chip-active);color:var(--chip-active-ink)}
+  .chip[aria-pressed="true"] .n{background:rgba(255,255,255,.18);color:#fff}
+  .chip:focus-visible,.btn:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--clay);outline-offset:2px}
+
+  /* ---------- Load states ---------- */
+  .notice{display:none;margin-top:20px;background:var(--clay-soft);border:1px solid var(--clay);color:var(--ink);border-radius:var(--radius);padding:14px 18px;font-size:14.5px;line-height:1.55}
+  .notice strong{color:var(--clay)}
+  .loading{margin-top:20px;text-align:center;padding:56px 20px;background:var(--surface);border:1px dashed var(--line-strong);border-radius:var(--radius)}
+  .loading p{color:var(--muted);margin:0;font-size:15px}
+  .spinner{width:30px;height:30px;margin:0 auto 14px;border-radius:50%;border:3px solid var(--line-strong);border-top-color:var(--pine);animation:spin 0.9s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @media (prefers-reduced-motion: reduce){ .spinner{animation:none} }
+
+  /* ---------- Grid / cards ---------- */
+  .grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:20px}
+  @media(min-width:640px){ .grid{grid-template-columns:1fr 1fr} }
+  @media(min-width:1020px){ .grid{grid-template-columns:1fr 1fr 1fr} }
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;break-inside:avoid}
+  .card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+  .cat-pill{font-size:11px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--pine);background:var(--surface-2);border-radius:999px;padding:5px 10px;line-height:1.2}
+  @media (prefers-color-scheme: dark){ .cat-pill{color:#9fd3b6} }
+  .years{font-size:11.5px;color:var(--muted);text-align:right;line-height:1.35;max-width:130px}
+  .card h2{font-family:"Newsreader",Georgia,serif;font-size:22px;font-weight:600;line-height:1.15;margin:12px 0 8px;letter-spacing:-.01em}
+  .desc{font-size:14.5px;line-height:1.6;color:var(--ink-2);margin:0;white-space:pre-line;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+  .card.expanded .desc{-webkit-line-clamp:unset;overflow:visible}
+  .more-btn{appearance:none;background:none;border:0;padding:10px 0 2px;font:inherit;font-size:13.5px;font-weight:700;color:var(--clay);cursor:pointer;align-self:flex-start;min-height:36px;text-align:left}
+  .contact{margin-top:14px;border-top:1px solid var(--line);padding-top:13px;display:grid;gap:9px}
+  .crow{display:flex;gap:10px;font-size:14px;line-height:1.45;color:var(--ink-2);align-items:flex-start}
+  .crow svg{flex:none;margin-top:1px;color:var(--muted)}
+  .crow a{color:var(--ink);font-weight:600;text-decoration:none;word-break:break-word}
+  .crow a:hover{text-decoration:underline}
+  .crow .lbl{color:var(--muted);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;display:block;margin-bottom:1px}
+  .card-foot{margin-top:auto;padding-top:16px;display:flex;gap:8px;flex-wrap:wrap}
+  .act{flex:1;min-width:96px;min-height:44px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;gap:7px;font-size:14px;font-weight:700;text-decoration:none;border:1px solid var(--line-strong);color:var(--ink);background:var(--surface)}
+  .act.call{background:var(--pine);border-color:var(--pine);color:#fff}
+  .act:active{transform:translateY(1px)}
+  mark{background:#f6df8e;color:#3a2c00;border-radius:2px;padding:0 1px}
+  @media (prefers-color-scheme: dark){ mark{background:#7a5f14;color:#ffe9a8} }
+
+  .empty{display:none;text-align:center;padding:56px 20px;background:var(--surface);border:1px dashed var(--line-strong);border-radius:var(--radius);margin-top:20px}
+  .empty h3{font-family:"Newsreader",Georgia,serif;font-size:24px;margin:0 0 8px}
+  .empty p{color:var(--muted);margin:0 0 18px;font-size:15px;line-height:1.55}
+
+  /* ---------- Footer sections ---------- */
+  .how{margin-top:44px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+  .how h3{font-family:"Newsreader",Georgia,serif;font-size:22px;margin:0 0 6px}
+  .how p{color:var(--ink-2);font-size:14.5px;line-height:1.6;margin:0 0 16px;max-width:760px}
+  .how-grid{display:grid;gap:14px}
+  @media(min-width:760px){ .how-grid{grid-template-columns:1fr 1fr 1fr} }
+  .how-item{border-top:3px solid var(--pine);padding-top:12px}
+  .how-item b{display:block;font-size:14.5px;margin-bottom:5px}
+  .how-item span{font-size:13.5px;line-height:1.55;color:var(--muted);display:block}
+  .how .btn{margin-top:20px}
+  footer{max-width:1180px;margin:0 auto;padding:0 20px 36px;color:var(--muted);font-size:13px;line-height:1.6}
+  @media print{
+    .hero::after{display:none}
+    .toolbar,.search-wrap,.card-foot,.more-btn,.notice{display:none !important}
+    .grid{grid-template-columns:1fr 1fr}
+    .desc{-webkit-line-clamp:unset}
+    body{background:#fff}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="toprow">
+      <div class="brand">
+        <div class="brand-mark">DC<br>BE</div>
+        <div>
+          <div class="brand-name">DeCordova Bend Estates</div>
+          <div class="brand-sub">Granbury, Texas · Lake Granbury</div>
+        </div>
+      </div>
+      <div class="hero-count"><strong id="heroCount">…</strong> local businesses listed</div>
+    </div>
+
+    <h1>Find a neighbor<br>who does <em>that.</em></h1>
+    <p class="lede">The DCBE business directory — roofers, realtors, dentists, detailers, and makers who live right here in the community. Search by name, trade, or keyword and get straight to a phone number.</p>
+
+    <div class="search-wrap" role="search">
+      <label class="search-field">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="Try “roofing”, “plumber”, “real estate”, a name…" autocomplete="off" aria-label="Search businesses">
+      </label>
+      <div class="search-actions">
+        <button class="btn btn-ghost" id="clearBtn" type="button">Clear</button>
+        <a class="btn btn-primary" href="#directory">Browse all ↓</a>
+        <a class="btn btn-clay" href="https://docs.google.com/forms/d/e/1FAIpQLSdkF24vj2x6ASuj0K_p26EVOJKg1YWvVpJ4xhdiQihjOwSKqQ/viewform" target="_blank" rel="noopener">List your business</a>
+      </div>
+    </div>
+
+    <div class="hero-meta">
+      <span><i class="dot"></i> All listings are DCBE residents &amp; community partners</span>
+      <span><i class="dot" id="liveDot"></i> <span id="liveStatus">Loading the live directory…</span></span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap" id="directory">
+  <div class="toolbar">
+    <div class="toolbar-row">
+      <p class="results-line" aria-live="polite"><strong id="resultCount">Loading…</strong> <span id="resultContext"></span></p>
+      <label class="sortbox">Sort
+        <select id="sortSel" aria-label="Sort listings">
+          <option value="az">Name A–Z</option>
+          <option value="category">Category, then name</option>
+        </select>
+      </label>
+    </div>
+    <div class="cats">
+      <div class="cats-label">Browse by category</div>
+      <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+    </div>
+  </div>
+
+  <div class="notice" id="notice" role="status">
+    <strong>Live data couldn’t be loaded.</strong> Showing the directory as it stood on November 11, 2026. Listings may have changed since then — try reloading the page to reconnect.
+  </div>
+
+  <div class="loading" id="loading">
+    <div class="spinner" aria-hidden="true"></div>
+    <p>Loading businesses from the directory…</p>
+  </div>
+
+  <main class="grid" id="grid"></main>
+
+  <div class="empty" id="empty">
+    <h3>No match in the directory</h3>
+    <p id="emptyText">Nothing matches that search. Try a broader word — a trade like “flooring” or just part of a business name.</p>
+    <button class="btn btn-primary" id="emptyClear" type="button">Show all businesses</button>
+  </div>
+
+  <section class="how" aria-label="How to get listed">
+    <h3>Run a business in DCBE? Get listed.</h3>
+    <p>The directory is for businesses owned by DeCordova Bend Estates residents and community partners. Getting listed takes a couple of minutes, and every listing is reviewed before it appears here.</p>
+    <div class="how-grid">
+      <div class="how-item"><b>1 · Fill out the form</b><span>Business name, category, a short description, and how neighbors can reach you — phone, email, website, hours.</span></div>
+      <div class="how-item"><b>2 · It gets reviewed</b><span>Submissions wait in a pending list until they’re approved, so the directory stays residents-only and the details stay accurate.</span></div>
+      <div class="how-item"><b>3 · You’re on the page</b><span>Once approved, your listing appears here automatically — no account, no fee, nothing to maintain.</span></div>
+    </div>
+    <a class="btn btn-clay" href="https://docs.google.com/forms/d/e/1FAIpQLSdkF24vj2x6ASuj0K_p26EVOJKg1YWvVpJ4xhdiQihjOwSKqQ/viewform" target="_blank" rel="noopener">List your business</a>
+  </section>
+</div>
+
+<footer>
+  DCBE Business Directory · DeCordova Bend Estates, Granbury, TX · Listings update automatically as approved businesses are added. Contact details are shown exactly as each business submitted them.
+</footer>
+
+<script>
+var FALLBACK = [{"name": "1420 The Zone KPIR Radio", "cat": "Other", "desc": "We are Granbury's only radio station, broadcasting 24/7 Sports on 1420 AM.  We offer quality programming, news, sports, and we are your home for TCU football.  We also offer low cost advertising for businesses that want to get their story out from Glen Rose to Benbrook to Weatherford to Cleburne.", "phone": "817 360-0360", "email": "jerry@carproshow.com", "web": "KPIR.com", "addr": "1620 Weatherford Highway", "avail": "7 Days a week/24 hours", "years": "Serving Hood County since 1980.", "status": "approved"}, {"name": "All Star Awards Company", "cat": "Other", "desc": "We offer custom gifts from your photos.  Themed gifts for golfers, businesses, birthdays, anniversaries or any special occasion. We make metal signs.  We create logos. We offer plaques trophies and awards.", "phone": "254-718-8685", "email": "allstarawardscompany@gmail.com", "web": "", "addr": "5117 Largo Dr, Granbury TX 76049, United States", "avail": "Call for information", "years": "Resident since 2013", "status": "approved"}, {"name": "AVRENO", "cat": "Technology", "desc": "• Residential and Commercial Audio/Video Services \n• Home Theaters, Game Rooms, TV Installations\n• Surround Sound & Whole-House Audio (Sonos Authorized Dealer)\n• Outdoor Landscape Audio & Lighting\n• Motorized Shades (Interior and Exterior for Patios)\n• Low-Voltage AV Pre-Wire for New Construction", "phone": "2144443088", "email": "sales@northdallashometheater.com", "web": "https://avreno.com/", "addr": "3800 Nocona Dr", "avail": "", "years": "", "status": "approved"}, {"name": "Bar Mart", "cat": "Restaurant & Bar Supplies", "desc": "Bar Mart is a retailer and wholesaler of bar supplies and equipment, janitorial supplies, juices, mixers and paper goods to the hospitality industry. Providing Bar and Restaurant supplies since 1953. We deliver to the Granbury area every other Wednesday with minimum delivery charge of $100 worth of products.", "phone": "(817) 595-0667", "email": "diana@barmart.net", "web": "https://www.barmart.net", "addr": "Contact Diana Barcafar", "avail": "Deliveries every other Wednesday to Granbury area", "years": "Community business partner", "status": "approved"}, {"name": "Bennett Rentals", "cat": "Equipment Rental", "desc": "General contracting equipment rental with a wide range of equipment from drain snakes to 125ft boom lifts. Professional equipment rental for construction, maintenance, and contractor needs.", "phone": "(817) 551-1814", "email": "thomas@bennettrents.com", "web": "", "addr": "Contact Thomas Bennett", "avail": "Equipment rental and delivery available", "years": "Equipment rental specialists", "status": "approved"}, {"name": "Berry & Berry Dental Associates", "cat": "Health & Wellness", "desc": "Full service cosmetic and implant dentistry offered right outside of north gate", "phone": "8173264098", "email": "smile@berryandberrydentalassociates.com", "web": "Berryandberrydental.com", "addr": "2600 James Road , Ste 100", "avail": "", "years": "Resident since 2000", "status": "approved"}, {"name": "Brazos Valley Grass", "cat": "Landscaping", "desc": "Brazos Valley Grass proudly supplies top-quality Bermuda, Saint Augustine, and Zoysia grass varieties from local farms.  Delivery, pickup, and expert installation available for residential and commercial projects.  Order your sod for delivery right to your site or pick up at our convenient retail location in Granbury.  We offer professional installation for all types of jobs.  \n\nUnsure which variety is best for your property? Call us today for expert guidance and details. We're here to help you choose the ideal turf for your soil, sunlight, and lifestyle.", "phone": "817-279-6020", "email": "dwane@brazosvalleygrass.com", "web": "www.brazosvalleygrass.com", "addr": "4118 Fairway Drive", "avail": "Monday - Friday 7AM - 5PM", "years": "Resident since 2013", "status": "approved"}, {"name": "Breathe Counseling & Clarity Center", "cat": "Health & Wellness", "desc": "I use several modalities, including therapeutic breathwork, CBT, and DBT to help clients quickly reduce symptoms while evaluating unhealthy emotional and behavioral patterns. I work with adolescents and adults suffering from mood and anxiety disorders, complex trauma, women’s issues, narcissistic abuse, attachment issues, and personality disorders. I also work with couples to improve communication, develop healthy conflict-resolution skills, and create a long-term family vision and mission that restores harmony in everyday life.\n\nI earned my B.A. in psychology from the University of Texas at Austin, and after a career as a business executive, returned to school in 2020, earning a Master of Science degree in clinical mental health counseling from Tarleton State University. I am an alumna of the National Women’s Leadership Academy, Leadership America, and was selected in 2015 to be a patient advocate for the National Center for Healthcare Research in Washington, D.C.", "phone": "(817) 736-1122", "email": "info@breatheclaritycenter.com", "web": "https://www.breatheclaritycenter.com/contact/", "addr": "1208 Fall Creek Highway • Suite D • Granbury • Texas • 76049", "avail": "Tuesday-Thursday 9-5", "years": "Resident since 2016", "status": "approved"}, {"name": "Brian O. Gaffin, Architects, Inc.", "cat": "Architecture & Construction", "desc": "Professional architectural and construction services through Brian O. Gaffin, Architects, Inc. and Gaffin Construction Group, Inc. Comprehensive design and build solutions for residential and commercial projects.", "phone": "(817) 266-4686", "email": "bgaffin@gaffinarchitects.com", "web": "", "addr": "P.O. Box 2156, Granbury, Texas 76048", "avail": "Contact for consultation and project estimates", "years": "Local architect and construction professional", "status": "approved"}, {"name": "Cocktail Concierge", "cat": "Other", "desc": "Mobile bartending services", "phone": "6822603226", "email": "info@cocktailconcierge.net", "web": "Cocktailconcierge.net", "addr": "6301 Navaho Trl", "avail": "By appt", "years": "Resident since 2017", "status": "approved"}, {"name": "Colorado Cards and More", "cat": "Other", "desc": "Handmade Greeting Cards for all occasions. You let me know what you need and I will design it for you if I don't have a premade one that you find here that you like.\nI have 400-500 cards already made on my greeting card racks. \n\nGolf - Female and Male, Birthdays, Graduation, Get Well, Sympathy, Thinking of You, Wedding, Anniversary, Baby and Kids, Christmas, Hanukkah, Halloween, Thanksgiving, Easter, Valentine's Day, Mother's Day and Father's Day", "phone": "720-245-1029", "email": "coloradocardsandmore@gmail.com", "web": "https://coloradocardsandmore.com", "addr": "6518 Sonora Drive", "avail": "Please contact me to come shopping for greeting cards.", "years": "Resident since 2021", "status": "approved"}, {"name": "Crown Quality Roofing", "cat": "Roofing", "desc": "Comprehensive roofing services including any roofing related projects, remodeling, construction, and painting. Experienced with commercial properties throughout DFW including Enterprise, Goodwill, churches, and many other commercial clients.", "phone": "(817) 675-1672", "email": "pecanswingman@charter.net", "web": "", "addr": "Contact David Riggan", "avail": "Available for residential and commercial projects", "years": "DFW area roofing specialist", "status": "approved"}, {"name": "Doug's Floors Plus, LLC.", "cat": "Flooring", "desc": "Furnish & instillation of tile, engineered  hardwood, sand & finish hardwood, luxury vinyl plank flooring, carpet, waterproof laminate,\nbacksplash tile, porch tile", "phone": "8179102213", "email": "dougfloorsplus@aol.com", "web": "www.dougsfloorsplus.com", "addr": "5353 Acton Hwy STE.B", "avail": "Monday-Friday 8:00am-5:00pm - Saturday by appointment", "years": "26 Yrs", "status": "approved"}, {"name": "GrowthIQ", "cat": "Technology", "desc": "We offer fractional paid marketing director help that allows businesses  to grow from $1mm to $5mm+.\n\nWith 15+ years of helping businesses grow and expand their paid media programs, we've seen every situation.\n\nContact us today to get the help you need!", "phone": "682-249-2174", "email": "Info@getgrowthiq.com", "web": "", "addr": "4212 MOJAVE DR", "avail": "Mon-Fri, 9 AM - 5 PM", "years": "Resident since 2023", "status": "approved"}, {"name": "Jessica Key, REALTOR® Keller Williams Brazos West", "cat": "Real Estate", "desc": "I provide exceptional, personalized service to help you get the best offer for your property. I work relentlessly on your behalf to strategically market and sell your Granbury home quickly and for top dollar. You deserve a dedicated LOCAL advocate who is looking out for your best interests every step of the way. I am committed to making your home, buying or selling, journey smooth and successful!", "phone": "2545922952", "email": "jessicakey@kw.com", "web": "https://keyskeepers.kw.com", "addr": "1099 Waters Edge Drive, Ste. 100", "avail": "Mon-Friday 8:00am-7:00pm, Weekends by appointment.", "years": "Resident since 2013", "status": "approved"}, {"name": "Kirk Landman Notary Services", "cat": "Notary Services", "desc": "Texas Notary offering remote signing.", "phone": "361.217.0797", "email": "landmank50@gmail.com", "web": "", "addr": "5301 Fairway Circle", "avail": "Call or text anytime", "years": "Resident since 2024", "status": "approved"}, {"name": "Lantana Overhead Door, LLC", "cat": "Garage Doors", "desc": "Full service, family owned and operated garage door company. Repair, replacement, and installation services for all makes and models of overhead doors and openers, both commercial and residential.", "phone": "(940) 453-7406", "email": "Sales@LantanaOverheadDoor.com", "web": "https://www.lantanaoverheaddoor.com/about-us/", "addr": "Contact John Blaskovich", "avail": "Contact for service and consultation", "years": "Family owned garage door specialists", "status": "approved"}, {"name": "Laundry Cat", "cat": "Laundry Services", "desc": "Full service laundry specializing in soiled items and difficult stains. Expert at removing grease, food, and mystery stains. Professional stain removal and laundry services.", "phone": "(817) 219-1968", "email": "jodiann@laundrycat.com", "web": "https://www.facebook.com/share/p/19hmuMf7U8/", "addr": "5032 Santa Elena Ct.", "avail": "Text or voice calls accepted", "years": "Local laundry specialist", "status": "approved"}, {"name": "Lee Horton and Associates", "cat": "Technology", "desc": "Cybersecurity and data privacy advisory helping organizations implement encryption, secure data sharing, zero-trust architecture, and regulatory security programs for sensitive, mission-critical, regulated and classified environments. \n\nProvides executive, professional, and community training on complex security and emerging technologies.", "phone": "214-729-1615", "email": "vlhorton@gmail.com", "web": "", "addr": "4921 Viejo Court", "avail": "24/7, 2 hour response time is negotiable.", "years": "Resident since 2016", "status": "approved"}, {"name": "MakeAI.Works", "cat": "Welding & Fabrication", "desc": "Custom 3D Design & Precision Fabrication for DeCordova\n\nBring your ideas to life with professional 3D printing, CAD design, and laser etching services right here in the community. Whether you need a discontinued part for your golf cart, a custom organizational solution for your home, or a personalized gift, we provide end-to-end production.\nOur Services\n\n    Custom CAD Design: We transform your descriptions, measurements, or sketches into editable OpenSCAD/CAD designs. You’ll receive a digital model for approval before we ever hit \"print.\"\n\n    Functional 3D Printing: High-quality production in a variety of materials:\n\n        PLA & PETG: Perfect for household gadgets and organizers.\n\n        TPU: Flexible, rubber-like material for seals, grips, and bumpers.\n\n        ABS: High-strength, heat-resistant plastic for automotive or outdoor use.\n\n    Laser Etching: Precision engraving on demand for wood, leather, or acrylic—ideal for custom signage or personalized gifts.\n\nCommon Solutions for Our Neighbors\n\n    Golfers: Custom bag tags, specialized club spacers, or hard-to-find replacement clips for carts.\n\n    Homeowners: Custom brackets, vintage hardware replicas, or bespoke kitchen and workshop organizers.\n\n    Personalization: Laser-etched commemorative items and unique décor.\n\nAdvanced Tech, Local Touch: Using industrial-grade equipment (Bambu P1S & Snapmaker systems), we ensure professional results with the convenience of a neighborly service.\n\nReady to start a project? Contact me today to discuss your measurements or design ideas! Alternatively visit our website at maeai.works (in progress).", "phone": "6823079750", "email": "gary@makeai.works", "web": "https://makeai.works", "addr": "4211 Cimmaron Trail", "avail": "Mon-Fri 10am - 2pm by appointment - please use email or text to connect.", "years": "Residence since 2025", "status": "approved"}, {"name": "Next Key Realty", "cat": "Real Estate", "desc": "DFW Realtor for 12+ years \nDCBE Resident \nWould love the opportunity to help you with all of your Real Estate needs!", "phone": "9729757653", "email": "kim@nextkeygroup.com", "web": "nextkeygroup.com", "addr": "5301 Fairway Circle", "avail": "Call or text anytime", "years": "Resident since 2024", "status": "approved"}, {"name": "Odom Private Wealth Management", "cat": "Financial Services", "desc": "Private wealth management services provided by Randy Odom, CRPC®, Managing Director. Personalized financial planning and investment guidance for individuals and families.", "phone": "817-502-3647", "email": "randy@odom-pwm.com", "web": "https://www.odom-pwm.com", "addr": "101 Summit Avenue Suite 316, Fort Worth, TX 76102", "avail": "By appointment", "years": "0", "status": "approved"}, {"name": "Options Plumbing", "cat": "Plumbing Services", "desc": "We provide reliable, professional plumbing services including: Leak detection and repair, Water heater installation and repair, Drain cleaning and maintenance, General residential plumbing needs.", "phone": "682-361-9300", "email": "contact@optionsplumbing.com", "web": "", "addr": "Contact Options Plumbing", "avail": "Available for plumbing services and emergencies", "years": "Professional plumbing contractor", "status": "approved"}, {"name": "Porch Snobs", "cat": "Other", "desc": "Curated front porch styling for all seasons. Creating inviting, elevated entrances - one doorstep at a time!\nEaster. Spring. Summer. Fourth of July. Fall. Christmas.", "phone": "9729757653", "email": "itsmekdee@gmail.com", "web": "", "addr": "5301 Fairway Circle", "avail": "Call or text anytime", "years": "Resident since 2024", "status": "approved"}, {"name": "Ricci Barnett Reflexology", "cat": "Health & Wellness", "desc": "Reflexology is an ancient healing art and one of a wide range of therapeutic treatments and interventions offered by trained professionals aimed at promoting healing.  It involves manipulation of the areas of the feet that hold the nerves of all the organs and spine.  The benefits include the stimulation of the lymphatic system and circulation which can promote over all well-being.\n\nRicci completed her training in 2006 in the Ingram method of Reflexology at the International School of Reflexology, St. Petersburg, FL.  She offers in home sessions by appointment and is a resident of DCBE.\n\nContact Ricci Barnett\n\nAvailable for in home sessions", "phone": "936-776-2689", "email": "", "web": "", "addr": "5405 Comanche Vista Trail", "avail": "By appointment 10:00 am to 4:00pm Monday- Saturday", "years": "Resident since 2025.", "status": "approved"}, {"name": "Ricky Davalos Handyman Service", "cat": "Handyman Services", "desc": "Specializing in any repairs, some plumbing issues, rock, concrete, welding, landscaping or clean ups. Professional handyman services for residential and commercial needs.", "phone": "817-964-6479", "email": "davalos.817@gmail.com", "web": "", "addr": "Contact Ricky Davalos", "avail": "Available for repairs and maintenance projects", "years": "Local handyman specialist", "status": "approved"}, {"name": "Rogz USA", "cat": "Pet Services", "desc": "Rogz USA supplies the Rogz brand of dog and cat products winner of the 2021 Brand of the Year - Global Tier. Rogz products include the Grinz ball - we put a smile on you and the dog. Reach out to us for your next dog or cat collar, leash, harness or toy.", "phone": "6823079750", "email": "gary@buyrogz.com", "web": "https://buyrogz.com", "addr": "4211 Cimmaron Trail", "avail": "9am - 5pm, contact us first for a tour of our products.", "years": "2025", "status": "approved"}, {"name": "Roof Quote me", "cat": "Roofing", "desc": "Instant Roof Quote\nOnline.", "phone": "682-500-0498", "email": "", "web": "Roof-quote-me.com", "addr": "4022, Fairway Drive", "avail": "", "years": "2019", "status": "approved"}, {"name": "Rustic Avenue", "cat": "Other", "desc": "We offer clothing, hats, purses, jewelry, tallow products, gifts and more", "phone": "", "email": "rusticavenue47@outlook.com", "web": "www.facebook.com/rusticavenue47", "addr": "Granbury", "avail": "Any day just message us", "years": "3", "status": "approved"}, {"name": "Smiley’s Flooring", "cat": "Flooring", "desc": "Carpet Laminate Wood\nMobile Showroom\nOver 50 years in area\nFREE ESTIMATES", "phone": "817-279-3053", "email": "smileysfloors@icloud.com", "web": "", "addr": "4120 Mojave Drive", "avail": "Mon-Fri 9am-6pm", "years": "Resident since 1998", "status": "approved"}, {"name": "Southern powersports", "cat": "Other", "desc": "Jet ski, motorcycles,Atv’s,sxs\nGolf carts repair", "phone": "6827881779", "email": "dtynes27@yahoo.com", "web": "Southernpowersportstx.com", "addr": "4900 Rio vista", "avail": "", "years": "1", "status": "approved"}, {"name": "Steve Henderson Welding", "cat": "Welding & Fabrication", "desc": "Professional welding and fabrication services including custom steel patio covers, fences and gates, welding repairs, and custom metal fabrication work.", "phone": "(817) 983-8449", "email": "steve@hendersonwelding.com", "web": "", "addr": "Contact Steve Henderson", "avail": "Available for custom projects and repairs", "years": "Local welding and fabrication specialist", "status": "approved"}, {"name": "Stevo’s Fab Shop", "cat": "Architecture & Construction", "desc": "Custom Wrought Iron Gates and Fence", "phone": "817-559-5029", "email": "", "web": "", "addr": "4022, Fairway Drive", "avail": "", "years": "2019", "status": "approved"}, {"name": "SUSAN CISKOWSKI CPA", "cat": "Other", "desc": "INDIVIDUAL TAX PREPARTION, BOOKKEEPING, PAYROLL TAX SERVICES", "phone": "8179102618", "email": "CISKOWSKICPA@YAHOO.COM", "web": "", "addr": "3230 FALL CREEK HWY #205", "avail": "BY APPOINTMENT", "years": "RESIDENT SINCE 1999", "status": "approved"}, {"name": "Texas Assured Financial Planning", "cat": "Other", "desc": "Certified Financial Planner(R) offering comprehensive financial planning services including investment management, retirement planning, tax planning and estate planning.", "phone": "(281)636-8075", "email": "admin@texasassured.com", "web": "https://www.texasassured.com", "addr": "4906 Walnut Place Court", "avail": "Mon-Fri 8 am-5 pm, weekends by appointment", "years": "Resident since 2021.", "status": "approved"}, {"name": "Texas energy savers", "cat": "Roofing", "desc": "All types of roofing \nSpecialist in metal roofing \nAnd discount insurance premiums as well as hail related insurance deliberations \nCall for details", "phone": "8178516988", "email": "1969tw@gmail.com", "web": "TexasEnergySavers.com", "addr": "5718 Hondo", "avail": "", "years": "1997", "status": "approved"}, {"name": "Texas Home Properties", "cat": "Real Estate", "desc": "Real Estate Sales, Property Management, and Leasing Property services. Professional real estate services for buying, selling, and managing properties in the area.", "phone": "(817) 578-9439", "email": "jduffey321@gmail.com", "web": "", "addr": "4305 Cimmaron Trl", "avail": "Contact for consultation", "years": "Local real estate professional", "status": "approved"}, {"name": "Texas Title", "cat": "Real Estate", "desc": "Buying or Selling a home?  Are you familiar with why title insurance is so important? Are you aware if you are paying for the title policy YOU are the one who get to choose where you close? Texas Title is here to work alongside your Realtor to ensure your buying or selling process as smooth as possible from a title perspective.  I love living in DCBE and happy to help connect you with the variety of resources I’ve curated over almost 20 years of living in Granbury.  #aplacetocallhome", "phone": "434.242.0000", "email": "lsilvestri@texastitle.com", "web": "www.texastitle.com", "addr": "6318 circo", "avail": "", "years": "", "status": "approved"}, {"name": "Texas Title Granbury", "cat": "Real Estate", "desc": "", "phone": "8173291510", "email": "lsilvestri@texastitle.com", "web": "", "addr": "201 East Pearl Street Suite B102-B103", "avail": "", "years": "", "status": "approved"}, {"name": "Wes Pearson Detailing", "cat": "Detailing Services", "desc": "Professional detailing services for cars, trucks, golf carts, and boats. Complete cleaning and detailing to keep your vehicles looking their best.", "phone": "(951) 202-0338", "email": "pearson951@yahoo.com", "web": "", "addr": "Contact John 'Wes' Pearson", "avail": "Available for mobile detailing services", "years": "Local detailing specialist", "status": "approved"}];
+
+var SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/1cBCKd7A8JY3evZBFZ3MEleReo13V17fXGZj1cWQb144/gviz/tq?tqx=out:csv&sheet=Directory";
+
+var ICONS = {
+  phone:'<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.25a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg>',
+  mail:'<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>',
+  globe:'<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg>',
+  pin:'<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>',
+  clock:'<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>'
+};
+
+var BUSINESSES = [];
+var state = { q:"", cat:"All", sort:"az" };
+var grid = document.getElementById('grid');
+var chipsEl = document.getElementById('chips');
+var qInput = document.getElementById('q');
+var resultCount = document.getElementById('resultCount');
+var resultContext = document.getElementById('resultContext');
+var emptyEl = document.getElementById('empty');
+var emptyText = document.getElementById('emptyText');
+var emptyClearBtn = document.getElementById('emptyClear');
+var loadingEl = document.getElementById('loading');
+var noticeEl = document.getElementById('notice');
+var liveStatus = document.getElementById('liveStatus');
+var liveDot = document.getElementById('liveDot');
+
+function esc(s){
+  return String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+function webHref(w){
+  if(!w) return "";
+  var t = w.trim();
+  if(/^https?:\/\//i.test(t)) return t;
+  return "https://" + t;
+}
+function webLabel(w){
+  return String(w||"").trim().replace(/^https?:\/\//i,"").replace(/\/$/,"");
+}
+function telHref(p){
+  return "tel:+1" + String(p||"").replace(/\D/g,"").replace(/^1(?=\d{10}$)/,"");
+}
+function highlight(text, q){
+  var safe = esc(text);
+  if(!q) return safe;
+  var needle = q.trim().toLowerCase();
+  if(!needle) return safe;
+  var idx = safe.toLowerCase().indexOf(needle.replace(/&/g,"&amp;").replace(/</g,"&lt;"));
+  if(idx === -1) return safe;
+  return safe.slice(0,idx) + "<mark>" + safe.slice(idx, idx+needle.length) + "</mark>" + safe.slice(idx+needle.length);
+}
+
+/* ---------- CSV parsing ---------- */
+function parseCSV(text){
+  var rows = [], row = [], field = "", inQuotes = false, i, c;
+  text = String(text||"").replace(/^\uFEFF/, "");
+  for(i = 0; i < text.length; i++){
+    c = text.charAt(i);
+    if(inQuotes){
+      if(c === '"'){
+        if(text.charAt(i+1) === '"'){ field += '"'; i++; }
+        else inQuotes = false;
+      } else field += c;
+    } else if(c === '"'){
+      inQuotes = true;
+    } else if(c === ","){
+      row.push(field); field = "";
+    } else if(c === "\n"){
+      row.push(field); field = ""; rows.push(row); row = [];
+    } else if(c !== "\r"){
+      field += c;
+    }
+  }
+  if(field.length || row.length){ row.push(field); rows.push(row); }
+  return rows;
+}
+
+function rowsToBusinesses(rows){
+  if(!rows || !rows.length) return [];
+  var header = rows[0].map(function(h){ return String(h||"").trim().toLowerCase(); });
+  function col(name){
+    var idx = header.indexOf(name);
+    return idx === -1 ? -1 : idx;
+  }
+  var C = {
+    name: col("business name"), cat: col("category"), desc: col("description"),
+    phone: col("phone"), email: col("email"), web: col("website"),
+    addr: col("address"), avail: col("availability"), years: col("years in community"),
+    status: col("status")
+  };
+  if(C.name === -1 || C.status === -1) return [];
+  function get(r, idx){ return idx === -1 ? "" : String(r[idx]||"").trim(); }
+  var out = [];
+  for(var i = 1; i < rows.length; i++){
+    var r = rows[i];
+    var name = get(r, C.name);
+    if(!name) continue;
+    if(get(r, C.status).toLowerCase() !== "approved") continue;
+    out.push({
+      name: name, cat: get(r, C.cat), desc: get(r, C.desc),
+      phone: get(r, C.phone), email: get(r, C.email), web: get(r, C.web),
+      addr: get(r, C.addr), avail: get(r, C.avail), years: get(r, C.years)
+    });
+  }
+  return out;
+}
+
+/* ---------- Category chips ---------- */
+var catCounts = {}, catList = [];
+function buildCats(){
+  catCounts = {};
+  BUSINESSES.forEach(function(b){ catCounts[b.cat] = (catCounts[b.cat]||0)+1; });
+  catList = Object.keys(catCounts).sort(function(a,b){ return a.localeCompare(b); });
+}
+function renderChips(){
+  var html = '<button type="button" class="chip" data-cat="All" aria-pressed="'+(state.cat==="All")+'">All businesses <span class="n">'+BUSINESSES.length+'</span></button>';
+  catList.forEach(function(c){
+    html += '<button type="button" class="chip" data-cat="'+esc(c)+'" aria-pressed="'+(state.cat===c)+'">'+esc(c)+' <span class="n">'+catCounts[c]+'</span></button>';
+  });
+  chipsEl.innerHTML = html;
+  var btns = chipsEl.querySelectorAll('.chip');
+  for(var i=0;i<btns.length;i++){
+    btns[i].addEventListener('click', function(){
+      state.cat = this.getAttribute('data-cat');
+      renderChips(); render();
+    });
+  }
+}
+
+function filtered(){
+  var q = state.q.trim().toLowerCase();
+  var list = BUSINESSES.filter(function(b){
+    if(state.cat !== "All" && b.cat !== state.cat) return false;
+    if(!q) return true;
+    var hay = (b.name+" "+b.cat+" "+b.desc+" "+b.addr+" "+b.avail).toLowerCase();
+    return q.split(/\s+/).every(function(w){ return hay.indexOf(w) !== -1; });
+  });
+  list.sort(function(a,b){
+    if(state.sort === "category"){
+      var c = a.cat.localeCompare(b.cat);
+      if(c !== 0) return c;
+    }
+    return a.name.toLowerCase().localeCompare(b.name.toLowerCase());
+  });
+  return list;
+}
+
+function cardHTML(b){
+  var rows = "";
+  if(b.phone) rows += '<div class="crow">'+ICONS.phone+'<div><span class="lbl">Phone</span><a href="'+telHref(b.phone)+'">'+esc(b.phone)+'</a></div></div>';
+  if(b.email) rows += '<div class="crow">'+ICONS.mail+'<div><span class="lbl">Email</span><a href="mailto:'+esc(b.email)+'">'+esc(b.email)+'</a></div></div>';
+  if(b.web) rows += '<div class="crow">'+ICONS.globe+'<div><span class="lbl">Website</span><a href="'+esc(webHref(b.web))+'" target="_blank" rel="noopener">'+esc(webLabel(b.web))+'</a></div></div>';
+  if(b.addr) rows += '<div class="crow">'+ICONS.pin+'<div><span class="lbl">Location</span>'+esc(b.addr)+'</div></div>';
+  if(b.avail) rows += '<div class="crow">'+ICONS.clock+'<div><span class="lbl">Hours / Availability</span>'+esc(b.avail)+'</div></div>';
+
+  var actions = "";
+  if(b.phone) actions += '<a class="act call" href="'+telHref(b.phone)+'">Call</a>';
+  if(b.email) actions += '<a class="act" href="mailto:'+esc(b.email)+'">Email</a>';
+  if(b.web) actions += '<a class="act" href="'+esc(webHref(b.web))+'" target="_blank" rel="noopener">Website ↗</a>';
+
+  var needsMore = (b.desc||"").length > 260;
+  return '<article class="card">'
+    + '<div class="card-top"><span class="cat-pill">'+esc(b.cat)+'</span>'
+    + (b.years ? '<span class="years">'+esc(b.years)+'</span>' : '')
+    + '</div>'
+    + '<h2>'+highlight(b.name, state.q)+'</h2>'
+    + (b.desc ? '<p class="desc">'+esc(b.desc)+'</p>' : '')
+    + (needsMore ? '<button type="button" class="more-btn">Read more +</button>' : '')
+    + (rows ? '<div class="contact">'+rows+'</div>' : '')
+    + (actions ? '<div class="card-foot">'+actions+'</div>' : '')
+    + '</article>';
+}
+
+function render(){
+  var list = filtered();
+  grid.innerHTML = list.map(cardHTML).join("");
+  document.getElementById('heroCount').textContent = BUSINESSES.length;
+  resultCount.textContent = list.length + (list.length===1 ? " business" : " businesses");
+  var ctx = [];
+  if(state.cat !== "All") ctx.push("in " + state.cat);
+  if(state.q.trim()) ctx.push('matching “' + state.q.trim() + '”');
+  resultContext.textContent = ctx.length ? "· " + ctx.join(" ") : "· showing all listings A–Z";
+  emptyClearBtn.textContent = "Show all " + BUSINESSES.length + " businesses";
+  emptyEl.style.display = list.length ? "none" : "block";
+  grid.style.display = list.length ? "" : "none";
+  if(!list.length){
+    emptyText.textContent = state.q.trim()
+      ? 'Nothing matches “' + state.q.trim() + '”' + (state.cat!=="All" ? ' in ' + state.cat : '') + '. Try a broader word — a trade like “flooring” — or clear the filters.'
+      : "No listings in this category yet.";
+  }
+  var moreBtns = grid.querySelectorAll('.more-btn');
+  for(var i=0;i<moreBtns.length;i++){
+    moreBtns[i].addEventListener('click', function(){
+      var card = this.closest('.card');
+      var open = card.classList.toggle('expanded');
+      this.textContent = open ? "Show less −" : "Read more +";
+    });
+  }
+}
+
+function clearAll(){
+  state.q = ""; state.cat = "All";
+  qInput.value = "";
+  renderChips(); render();
+  qInput.focus();
+}
+
+qInput.addEventListener('input', function(){ state.q = this.value; render(); });
+document.getElementById('sortSel').addEventListener('change', function(){ state.sort = this.value; render(); });
+document.getElementById('clearBtn').addEventListener('click', clearAll);
+emptyClearBtn.addEventListener('click', clearAll);
+
+/* ---------- Load: live Sheet first, Nov 11 snapshot as fallback ---------- */
+function showData(list, isLive){
+  BUSINESSES = list;
+  loadingEl.style.display = "none";
+  if(isLive){
+    noticeEl.style.display = "none";
+    liveDot.className = "dot live";
+    var now = new Date();
+    liveStatus.textContent = "Live directory · loaded " + now.toLocaleDateString("en-US",{month:"long", day:"numeric", year:"numeric"});
+  } else {
+    noticeEl.style.display = "block";
+    liveDot.className = "dot offline";
+    liveStatus.textContent = "Showing the November 11, 2026 directory";
+  }
+  buildCats();
+  if(state.cat !== "All" && !catCounts[state.cat]) state.cat = "All";
+  renderChips();
+  render();
+}
+
+function loadFallback(){
+  showData(FALLBACK.slice(), false);
+}
+
+if(window.fetch){
+  var ctrl = ("AbortController" in window) ? new AbortController() : null;
+  var timer = ctrl ? setTimeout(function(){ ctrl.abort(); }, 12000) : null;
+  fetch(SHEET_CSV_URL, ctrl ? { signal: ctrl.signal } : {})
+    .then(function(res){
+      if(timer) clearTimeout(timer);
+      if(!res.ok) throw new Error("HTTP " + res.status);
+      return res.text();
+    })
+    .then(function(text){
+      var list = rowsToBusinesses(parseCSV(text));
+      if(!list.length) throw new Error("No approved rows in Sheet response");
+      showData(list, true);
+    })
+    .catch(function(){ loadFallback(); });
+} else {
+  loadFallback();
+}
+</script>
+</body>
+</html>
